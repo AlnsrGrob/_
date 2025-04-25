@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="النسر للملابس الجاهزة - أزياء أنيقة بجودة عالية">
+    <title>النسر للملابس الجاهزة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2a2f4fb7;
+            --secondary-color: #917fb3a0;
+            --accent-color: #E5BEEC;
+            --text-color: #FDE2F3;
+            --gap: 1.5rem;
+            --padding: 1.5rem;
+            --border-radius: 1rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: clamp(1rem, 1rem + 0.5vw, 1.2rem);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, var(--primary-color), #1A1C30);
+            color: var(--text-color);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        /* ---------- التعديلات الجديدة للهيدر ---------- */
+        .header {
+            position: sticky;
+            top: 0;
+            height: 90px; /* ارتفاع ثابت للهيدر */
+            background: linear-gradient(135deg, rgba(63, 68, 99, 0.2), rgba(33, 37, 75, 0.6));
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(229, 190, 236, 0.1);
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* إخفاء أي محتوى زائد */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transform: scale(1.3); /* تكبير العناصر الداخلية */
+            transform-origin: right center; /* الحفاظ على المحاذاة اليمينية */
+            padding-right: 2rem; /* تعديل المسافة الداخلية */
+        }
+
+        .logo-img {
+            width: 100px; /* حجم الصورة الجديد */
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(229, 190, 236, 0.3));
+            animation: logoGlow 3s ease-in-out infinite;
+        }
+
+        .brand-name {
+            font-size: 1.8rem; /* حجم النص الجديد */
+            font-weight: 700;
+            background: linear-gradient(45deg, #E5BEEC, #917FB3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 15px rgba(145, 127, 179, 0.2);
+            line-height: 1.2;
+            position: relative;
+        }
+
+        .brand-name::after {
+            content: '';
+            position: absolute;
+            right: -1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%;
+            width: 2px;
+            background: linear-gradient(180deg, transparent, #E5BEEC, transparent);
+        }
+
+        @keyframes logoGlow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(229, 190, 236, 0.3)); }
+            50% { filter: drop-shadow(0 0 25px rgba(229, 190, 236, 0.5)); }
+        }
+
+        /* التعديلات للشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .header { height: 80px; }
+            
+            .logo-container {
+                transform: scale(1);
+                padding-right: 1rem;
+            }
+            
+            .logo-img {
+                width: 80px;
+                animation: none;
+            }
+            
+            .brand-name {
+                font-size: 1.4rem;
+                -webkit-text-fill-color: var(--accent-color);
+                background: none;
+            }
+            
+            .brand-name::after { display: none; }
+        }
+
+        /* بقية التنسيقات */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--padding);
+        }
+
+        .main-content {
+            margin-top: var(--gap);
+            padding-bottom: var(--gap);
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--gap);
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .whatsapp { color: #25D366; }
+        .facebook { color: #1877F2; }
+        .instagram { color: #E4405F; }
+        .telegram { color: #0088CC; }
+        .phone { color: var(--accent-color); }
+
+        footer {
+            background: var(--primary-color);
+            text-align: center;
+            padding: 2rem var(--padding);
+            margin-top: var(--gap);
+        }
+
+        footer p { margin-bottom: 0.5rem; }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo-container">
+                <img src="2.png" alt="لوجو النسر" class="logo-img">
+                <h1 class="brand-name">النسر جروب للملابس</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content container">
+        <div class="social-grid">
+            <div class="social-card">
+                <a href="https://wa.me/qr/PJY5Y6M5W6V5L1" target="_blank" class="social-link">
+                    <i class="fa-brands fa-whatsapp social-icon whatsapp"></i>
+                    <span>واتساب مباشر</span>
+                </a>
+            </div>
+            <div class="social-card">
+                <a href="https://www.instagram.com/dlslymn2/profilecard/" target="_blank" class="social-link">
+                    <i class="fa-brands fa-instagram social-icon instagram"></i>
+                    <span>إنستجرام</span>
+                </a>
+            </div>
+            <div class="social-card">
+                <a href="tel:+201024053156" class="social-link">
+                    <i class="fa-solid fa-phone-volume social-icon phone"></i>
+                    <span>اتصال فوري</span>
+                </a>
+            </div>
+            <div class="social-card">
+                <a href="https://whatsapp.com/channel/0029VazXZMM7IUYUKyqPQJ05" target="_blank" class="social-link">
+                    <i class="fa-brands fa-whatsapp social-icon whatsapp"></i>
+                    <span>قناة الواتساب</span>
+                </a>
+            </div>
+            <div class="social-card">
+                <a href="https://t.me/adelalnesr" target="_blank" class="social-link">
+                    <i class="fa-brands fa-telegram social-icon telegram"></i>
+                    <span>تلجرام</span>
+                </a>
+            </div>
+            <div class="social-card">
+                <a href="https://wa.me/qr/H6NLVPDK25KEB1" target="_blank" class="social-link">
+                    <i class="fa-brands fa-facebook-f social-icon facebook"></i>
+                    <span>صفحة الفيسبوك</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 النسر للملابس الجاهزة. جميع الحقوق محفوظة</p>
+            <p>العنوان: مصر - الجيزة</p>
+            <p>أوقات العمل: يومياً من 9 صباحاً حتى 10 مساءً</p>
+        </div>
+    </footer>
+</body>
+</html>
