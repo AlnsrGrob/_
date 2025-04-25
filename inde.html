@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="النسر للملابس الجاهزة - أزياء أنيقة بجودة عالية">
+    <title>النسر للملابس الجاهزة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2A2F4F;
+            --secondary-color: #917FB3;
+            --accent-color: #E5BEEC;
+            --text-color: #FDE2F3;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1A1C30 100%);
+            color: var(--text-color);
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .header {
+            padding: 2rem 1rem;
+            background: rgba(42, 47, 79, 0.95);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .main-content {
+            margin-top: 160px;
+            padding: 2rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .social-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+        }
+
+        .social-icon {
+            font-size: 2.5rem;
+            transition: var(--transition);
+        }
+
+        .whatsapp { color: #25D366; }
+        .facebook { color: #1877F2; }
+        .instagram { color: #E4405F; }
+        .telegram { color: #0088CC; }
+        .phone { color: var(--accent-color); }
+
+        footer {
+            background: var(--primary-color);
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .social-link { font-size: 1.2rem; }
+            .social-icon { font-size: 2rem; }
+            .main-content { margin-top: 120px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.8rem; }
+            .social-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-shirt" style="color: var(--accent-color); font-size: 2rem;"></i>
+            <h1>النسر للملابس الجاهزة</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="social-grid">
+            <div class="social-card">
+                <a href="https://wa.me/qr/PJY5Y6M5W6V5L1" target="_blank" class="social-link">
+                    <i class="fa-brands fa-whatsapp social-icon whatsapp"></i>
+                    <span>واتساب مباشر</span>
+                </a>
+            </div>
+
+            <div class="social-card">
+                <a href="https://www.instagram.com/dlslymn2/profilecard/" target="_blank" class="social-link">
+                    <i class="fa-brands fa-instagram social-icon instagram"></i>
+                    <span>إنستجرام</span>
+                </a>
+            </div>
+
+            <div class="social-card">
+                <a href="tel:+201024053156" class="social-link">
+                    <i class="fa-solid fa-phone-volume social-icon phone"></i>
+                    <span>اتصال فوري</span>
+                </a>
+            </div>
+
+            <div class="social-card">
+                <a href="https://whatsapp.com/channel/0029VazXZMM7IUYUKyqPQJ05" class="social-link">
+                    <i class="fa-brands fa-whatsapp social-icon whatsapp"></i>
+                    <span>قناة الواتساب</span>
+                </a>
+            </div>
+
+            <div class="social-card">
+                <a href="https://t.me/adelalnesr" target="_blank" class="social-link">
+                    <i class="fa-brands fa-telegram social-icon telegram"></i>
+                    <span>تلجرام</span>
+                </a>
+            </div>
+
+            <div class="social-card">
+                <a href="https://wa.me/qr/H6NLVPDK25KEB1" target="_blank" class="social-link">
+                    <i class="fa-brands fa-facebook-f social-icon facebook"></i>
+                    <span>صفحة الفيسبوك</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 النسر للملابس الجاهزة. جميع الحقوق محفوظة</p>
+        <p>العنوان: مصر - الإسكندرية</p>
+        <p>اوقات العمل: يومياً من 9 صباحاً حتى 10 مساءً</p>
+    </footer>
+</body>
+</html>
