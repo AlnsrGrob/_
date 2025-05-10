@@ -57,13 +57,13 @@
             display: flex;
             align-items: center;
             gap: 1.5rem;
-            transform: scale(1.3); /* تكبير العناصر الداخلية */
-            transform-origin: right center; /* الحفاظ على المحاذاة اليمينية */
-            padding-right: 2rem; /* تعديل المسافة الداخلية */
+            transform: scale(1.1); /* تقليل حجم العناصر الداخلية */
+            transform-origin: right center;
+            padding: 1rem 2rem; /* إضافة مسافة حول اللوجو */
         }
 
         .logo-img {
-            width: 100px; /* حجم الصورة الجديد */
+            width: 80px; /* تصغير حجم الصورة */
             height: auto;
             filter: drop-shadow(0 0 15px rgba(229, 190, 236, 0.3));
             animation: logoGlow 3s ease-in-out infinite;
@@ -303,6 +303,13 @@
                 font-size: 0.9rem;
             }
         }
+
+        .phone-number {
+            direction: ltr;
+            unicode-bidi: embed;
+            text-align: left;
+            display: inline-block;
+        }
     </style>
     <script>
         function showContactModal() {
@@ -389,7 +396,7 @@
                 </a>
             </div>
             <div class="social-card">
-                <a href="https://alnsrgrob.github.io/_/" target="_blank" class="social-link">
+                <a href="https://your-store-link.com" target="_blank" class="social-link">
                     <i class="fa-solid fa-shop social-icon store"></i>
                     <span>متجرنا</span>
                 </a>
@@ -408,15 +415,15 @@
             <div class="contact-info">
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>0102 4053 156</span>
+                    <span class="phone-number">0102 405 3156</span>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>0155 867 3644</span>
+                    <span class="phone-number">0155 867 3644</span>
                 </div>
                 <div class="contact-item">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <span>واتساب: 0155 867 3644</span>
+                    <span class="phone-number">واتساب: <span class="phone-number">0155 867 3644</span></span>
                 </div>
             </div>
         </div>
